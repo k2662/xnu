@@ -12,6 +12,8 @@ jobs:
     runs-on: macos-latest
 
     steps:
+    - name: make
+      run: sudo xcode-select install
     - uses: actions/checkout@v3
     - name: make
       run: make SDKROOT=macosx ARCH_CONFIGS=X86_64 KERNEL_CONFIGS="RELEASE"
