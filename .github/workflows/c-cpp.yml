@@ -12,8 +12,8 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - name: make
-      run: ls
+    - name: install make
+      run: brew install gmake
     - uses: actions/checkout@v3
     - name: make
       run: make SDKROOT=/Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk ARCH_CONFIGS=X86_64 KERNEL_CONFIGS="RELEASE"
